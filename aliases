@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# ls
+alias ls='ls -F --color=auto'
+alias ll='ls -lh'
+alias la='ls -a'
+alias lla='ll -a'
+
+alias mkdir="mkdir -p"
+alias rm='rm -iv'
+alias mv='mv -iv'
+alias cp='cp -iv'
+alias ln='ln -v'
+
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'
+
+# Include custom aliases
+if [[ -f ~/.aliases.local ]]; then
+  source ~/.aliases.local
+fi
