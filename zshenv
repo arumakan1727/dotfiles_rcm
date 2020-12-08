@@ -1,8 +1,7 @@
 [[ -d ${HOME}/bin ]] && export PATH="${HOME}/bin:${PATH}"
+[[ -d ${HOME}/.local/bin ]] && export PATH="${HOME}/.local/bin:${PATH}"
 
 export EDITOR=nvim
-
-export PAGER='lv -c'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="${HOME}/.sdkman"
