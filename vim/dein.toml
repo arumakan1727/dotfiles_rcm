@@ -1,0 +1,175 @@
+#-----------------------------------------------------------------------------------
+# Plugins for Vim and Neovim {{{
+[[plugins]] # プラグインマネージャ
+repo = 'Shougo/dein.vim'
+
+[[plugins]] # カーソル位置のコンテキストのfiletypeを判定するライブラリ
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]] # 囲える
+repo = 'tpope/vim-surround'
+
+[[plugins]] # 整形
+repo = 'junegunn/vim-easy-align'
+hook_add = '''
+  nmap ga <Plug>(EasyAlign)
+  xmap ga <Plug>(EasyAlign)
+'''
+
+[[plugins]] # 簡単にコメントトグル
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'cocstatus': 'coc#status'
+      \ },
+      \ }
+" Use auocmd to force lightline update.
+autocmd! User CocStatusChange,CocDiagnosticChange call lightline#update()
+'''
+
+[[plugins]] # 行末の空白文字を削除するコマンドを追加
+repo = 'ntpeters/vim-better-whitespace'
+hook_add = '''
+  let g:vim_markdown_folding_disabled = 1
+  let g:better_whitespace_operator=''
+  let g:better_whitespace_enabled = 0
+  let g:strip_whitespace_on_save = 0
+  let g:better_whitespace_filetypes_blacklist = ['txt', 'markdown', 'md']
+'''
+
+[[plugins]] # vim-surround とかの操作も . でリピートできるようにする
+repo = 'tpope/vim-repeat'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+hook_add = '''
+  let g:indentLine_enabled = 1
+  let g:indentLine_char = '¦'
+'''
+# }}}
+
+#-----------------------------------------------------------------------------------
+# Plugins for only Neovim {{{
+[[plugins]] # terminalがもっと便利になる
+repo = 'kassio/neoterm'
+if = "has('nvim')"
+
+[[plugins]] # なんかすごいやつ
+repo = 'Shougo/denite.nvim'
+if = "has('nvim')"
+hook_add = '''
+  source ~/.vim/plughook/denite-hook.vim
+'''
+
+#[[plugins]]
+#repo = 'dense-analysis/ale'
+#if = "has('nvim')"
+#hook_add = '''
+#  source ~/.vim/plughook/ale-hook.vim
+#'''
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+if = "has('nvim')"
+hook_add = '''
+  let g:EasyMotion_do_mapping = 0
+  " `{char}{char}{label}`
+  " Need one more keystroke, but on average, it may be more comfortable.
+  nmap <Space>s <Plug>(easymotion-overwin-f2)
+  " Turn on case-insensitive feature
+  let g:EasyMotion_smartcase = 1
+  " JK motions: Line motions
+  nmap <Space>j <Plug>(easymotion-j)
+  nmap <Space>k <Plug>(easymotion-k)
+'''
+
+# }}}
+
+#-----------------------------------------------------------------------------------
+# Syntax language support {{{
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
+
+[[plugins]]
+repo = 'octol/vim-cpp-enhanced-highlight'
+on_ft = ['c', 'cpp']
+
+[[plugins]]
+repo = 'mboughaba/i3config.vim'
+on_ft = ['i3config']
+
+[[plugins]]
+repo = 'zah/nim.vim'
+on_ft = ['nim']
+
+[[plugins]]
+repo = 'yasuhiroki/github-actions-yaml.vim'
+on_ft = ['yaml']
+
+[[plugins]]
+repo = 'dag/vim-fish'
+on_ft = ['fish']
+
+[[plugins]]
+repo = 'keith/swift.vim'
+on_ft = ['swift']
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+on_ft = ['markdown']
+hook_add = '''
+  let g:vim_markdown_conceal = 0
+  let g:tex_conceal = ""
+  let g:vim_markdown_math = 1
+  let g:vim_markdown_conceal_code_blocks = 0
+  let g:vim_markdown_frontmatter = 1
+'''
+
+[[plugins]]
+repo = 'vim-crystal/vim-crystal'
+on_ft = ['cr']
+
+[[plugins]]
+repo = 'udalov/kotlin-vim'
+on_ft = ['kotlin']
+#}}}
+
+#-----------------------------------------------------------------------------------
+# Colorshemes {{{
+[[plugins]]
+repo = 'morhetz/gruvbox'
+
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+
+[[plugins]]
+repo = 'sainnhe/sonokai'
+hook_add = '''
+  set background=dark
+  let g:sonokai_enable_italic = 1
+  let g:sonokai_style = 'shusia'
+  " au MyAutoCmd VimEnter * AirlineTheme sonokai
+'''
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'joshdick/onedark.vim'
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+hook_add = '''
+let g:solarized_termcolors=256
+'''
+# }}}
