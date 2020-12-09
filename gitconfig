@@ -17,7 +17,7 @@
   autocrlf = input
   quotepath = false
 [merge]
-  ff = only
+  ff = false
 [fetch]
   prune = true
 [rebase]
@@ -26,3 +26,5 @@
   path = ~/.gitconfig.local
 [diff]
   colorMoved = zebra
+[pull]
+	ff = only
