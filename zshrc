@@ -58,6 +58,8 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+(command -v pip3 &> /dev/null) && eval "$(pip3 completion --zsh)"
+
 
 ####################################################################################################
 # Plugin setup
