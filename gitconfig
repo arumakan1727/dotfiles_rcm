@@ -27,4 +27,4 @@
 [diff]
   colorMoved = zebra
 [pull]
-	ff = only
+  ff = only
