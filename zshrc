@@ -60,6 +60,8 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 (command -v pip3 &> /dev/null) && eval "$(pip3 completion --zsh)"
 (command -v direnv &> /dev/null) && eval "$(direnv hook zsh)"
 
+bindkey '^[[Z' reverse-menu-complete
+
 
 ####################################################################################################
 # Plugin setup
