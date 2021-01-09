@@ -16,3 +16,5 @@ nnoremap H :tabprev<CR>
 nnoremap <CR> i<CR><ESC>
 
 nnoremap <Space>w <C-w>
+
+nnoremap <ESC><ESC> :nohlsearch<CR>
