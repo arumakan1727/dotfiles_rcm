@@ -12,6 +12,7 @@
   cko = checkout
   pf = push --force-with-lease
   st = status
+  sta = status --untracked-files=all
 [core]
   excludesfile = ~/.gitignore_global
   autocrlf = input

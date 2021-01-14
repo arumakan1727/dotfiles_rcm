@@ -142,6 +142,11 @@ on_ft = ['cr']
 [[plugins]]
 repo = 'udalov/kotlin-vim'
 on_ft = ['kotlin']
+
+
+[[plugins]]
+repo = 'kylef/apiblueprint.vim'
+on_ft = ['apiblueprint']
 #}}}
 
 #-----------------------------------------------------------------------------------

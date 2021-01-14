@@ -12,9 +12,18 @@
       "command": "gopls",
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"]
+    },
+    "nimlsp": {
+        "command": "nimlsp",
+        "rootPatterns": ["*.nimble"],
+        "filetypes": ["nim"],
+        "trace.server": "verbose",
+        "enable": true
     }
   },
   "snippets.priority": 5,
   "clangd.arguments": ["--background-index", "--header-insertion=never"],
+  "python.jediEnabled": false,
+  "python.formatting.provider": "black",
   "sourcekit.commandPath": "/usr/local/bin/sourcekit-lsp"
 }
