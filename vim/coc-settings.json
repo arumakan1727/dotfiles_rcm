@@ -2,12 +2,6 @@
   "suggest.noselect": true,
   "suggest.preferCompleteThanJumpPlaceholder": false,
   "languageserver": {
-    "clangd": {
-      "command": "clangd",
-      "args": ["--background-index", "--header-insertion=never"],
-      "rootPatterns":["compile_flags.txt", "compile_commands.json", ".vim/", ".git/"],
-      "filetypes": ["c", "cpp", "objc", "objcpp"]
-    },
     "bash":{
       "command": "bash-language-server",
       "args": ["start"],
@@ -28,6 +22,7 @@
     }
   },
   "snippets.priority": 5,
+  "clangd.arguments": ["--background-index", "--header-insertion=never"],
   "python.jediEnabled": false,
   "python.formatting.provider": "black",
   "sourcekit.commandPath": "/usr/local/bin/sourcekit-lsp"
