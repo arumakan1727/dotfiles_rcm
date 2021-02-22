@@ -63,19 +63,12 @@ hook_add = '''
 repo = 'kassio/neoterm'
 if = "has('nvim')"
 
-[[plugins]] # なんかすごいやつ
-repo = 'Shougo/denite.nvim'
-if = "has('nvim')"
-hook_add = '''
-  source ~/.vim/plughook/denite-hook.vim
-'''
-
-#[[plugins]]
-#repo = 'dense-analysis/ale'
-#if = "has('nvim')"
-#hook_add = '''
-#  source ~/.vim/plughook/ale-hook.vim
-#'''
+#[[plugins]] # なんかすごいやつ
+# repo = 'Shougo/denite.nvim'
+# if = "has('nvim')"
+# hook_add = '''
+#   source ~/.vim/plughook/denite-hook.vim
+# '''
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
