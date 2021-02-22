@@ -13,6 +13,7 @@
   pf = push --force-with-lease
   st = status
   sta = status --untracked-files=all
+  graph = log --graph --oneline
 [core]
   excludesfile = ~/.gitignore_global
   autocrlf = input
