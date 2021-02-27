@@ -24,6 +24,17 @@ path=(
   $path
 )
 
+# zsh関数のサーチパス
+fpath=(
+  $HOME/.zfunc(N-/)
+  $HOME/.config/zsh/zfunc(N-/)
+  $HOME/.config/completion.local(N-/)
+  $HOME/.config/completion(N-/)
+  /usr/local/share/zsh/site-functions
+  /usr/share/zsh/site-functions
+  $fpath
+)
+
 ## SHELL
 if SHELL=$(builtin command -v zsh); then
   export SHELL
@@ -41,6 +52,13 @@ fi
 ## LESS
 export PAGER=less
 export LESS='--no-init --quit-if-one-screen -R --LONG-PROMPT -i --shift 4 --jump-target=3'
+
+# LS_COLORS
+if builtin command -v dircolors > /dev/null 2>&1 && [ -f "$HOME/.config/dircolors" ]; then
+  eval "$(dircolors "$HOME/.config/dircolors")"
+else
+  eval "$(dircolors -b)"
+fi
 
 ## Language tools
 export GOPATH=$HOME/.go
