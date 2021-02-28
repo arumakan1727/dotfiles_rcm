@@ -21,7 +21,7 @@ repo = 'dense-analysis/ale'
 on_ft = ['nim']
 if = '!exists("g:vscode")'
 hook_add = '''
-  source ~/.vim/plughook/ale-hook.vim
+  source ~/.config/nvim/pluginconfig/ale-hook.vim
 '''
 
 #-----------------------------------------------------------------------------------
@@ -33,6 +33,6 @@ rev = 'release'
 on_i = 1
 merged = '0'
 hook_source = '''
-  source ~/.vim/plughook/coc-hook.vim
+  source ~/.config/nvim/pluginconfig/coc-hook.vim
   let b:coc_pairs_disabled = ['<']
 '''

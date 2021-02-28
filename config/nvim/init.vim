@@ -7,26 +7,16 @@ set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,euc-jp,iso-2022-jp,cp932,sjis,latin1
 set fileformats=unix,dos,mac
 
-set sh=zsh
-
 " This .vimrc's encoding (NOTE: This must be written after `set encoding=...`)
 scriptencoding utf-8
 
-" Base configuration
-source ~/.vim/base.vim
+source ~/.config/nvim/rc/base.vim
 
-" Key mappings
-source ~/.vim/keymappings.vim
+source ~/.config/nvim/rc/keymappings.vim
 
-" Plugin install
-if filereadable(expand('~/.vim/load-dein.vim'))
-  source ~/.vim/load-dein.vim
-endif
+source ~/.config/nvim/rc/load-dein.vim
 
-" Template for competitive programming
-if filereadable(expand('~/.vim/template-set.vim'))
-  source ~/.vim/template-set.vim
-endif
+source ~/.config/nvim/autoload/template-setter.vim
 
 try
   colorscheme gruvbox

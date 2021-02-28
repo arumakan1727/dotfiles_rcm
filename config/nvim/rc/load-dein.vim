@@ -22,8 +22,8 @@ endif
 " プラグイン読み込み & キャッシュ作成
 if dein#load_state(s:dein_cache_path)
   call dein#begin(s:dein_cache_path)
-  call dein#load_toml('~/.vim/dein.toml', {'lazy' : 0})
-  call dein#load_toml('~/.vim/deinlazy.toml', {'lazy' : 1})
+  call dein#load_toml('~/.config/nvim/pluginconfig/dein.toml', {'lazy' : 0})
+  call dein#load_toml('~/.config/nvim/pluginconfig/deinlazy.toml', {'lazy' : 1})
   call dein#end()
   call dein#save_state()
 endif
