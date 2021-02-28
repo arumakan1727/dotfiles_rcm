@@ -20,3 +20,7 @@ function ascii_color_code() {
 function find_no_new_line_at_end_of_file() {
   find * -type f -print0 | xargs -0 -L1 bash -c 'test "$(tail -c 1 "$0")" && echo "No new line at end of $0"'
 }
+
+function xkb_reload_my_settings() {
+  xkbcomp -I${HOME}/.xkb ~/.xkb/keymap/mykbd $DISPLAY 2> /dev/null
+}
