@@ -29,6 +29,6 @@ if filereadable(expand('~/.vim/template-set.vim'))
 endif
 
 try
-  colorscheme molokai
+  colorscheme gruvbox
 catch
 endtry
