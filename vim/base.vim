@@ -28,9 +28,6 @@ set autoindent smartindent
 "softtabstopはTabキー押し下げ時の挿入される空白の量，0の場合はtabstopと同じ，BSにも影響する
 set tabstop=4 shiftwidth=4 softtabstop=4
 
-"整形オプション (jp-reference: https://vim-jp.org/vimdoc-ja/change.html#fo-table)
-autocmd! FileType * set formatoptions=clmrqj
-
 "----------------------------------------------------------------------------------------
 " Command Completion
 set wildmenu
