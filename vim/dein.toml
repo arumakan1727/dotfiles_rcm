@@ -18,9 +18,11 @@ hook_add = '''
 
 [[plugins]] # 簡単にコメントトグル
 repo = 'tpope/vim-commentary'
+if = '!exists("g:vscode")'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
+if = '!exists("g:vscode")'
 hook_add = '''
 let g:lightline = {
       \ 'colorscheme': 'wombat',
@@ -38,6 +40,7 @@ autocmd! User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 [[plugins]] # 行末の空白文字を削除するコマンドを追加
 repo = 'ntpeters/vim-better-whitespace'
+if = '!exists("g:vscode")'
 hook_add = '''
   let g:vim_markdown_folding_disabled = 1
   let g:better_whitespace_operator=''
@@ -51,6 +54,7 @@ repo = 'tpope/vim-repeat'
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
+if = '!exists("g:vscode")'
 hook_add = '''
   let g:indentLine_enabled = 1
   let g:indentLine_char = '¦'
@@ -58,24 +62,19 @@ hook_add = '''
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+if = '!exists("g:vscode")'
 # }}}
 
 #-----------------------------------------------------------------------------------
 # Plugins for only Neovim {{{
 [[plugins]] # terminalがもっと便利になる
 repo = 'kassio/neoterm'
-if = "has('nvim')"
+if = 'has("nvim") && !exists("g:vscode")'
 
-#[[plugins]] # なんかすごいやつ
-# repo = 'Shougo/denite.nvim'
-# if = "has('nvim')"
-# hook_add = '''
-#   source ~/.vim/plughook/denite-hook.vim
-# '''
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
-if = "has('nvim')"
+if = 'has("nvim") && !exists("g:vscode")'
 hook_add = '''
   let g:EasyMotion_do_mapping = 0
   " `{char}{char}{label}`
@@ -95,34 +94,42 @@ hook_add = '''
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = ['toml']
+if = '!exists("g:vscode")'
 
 [[plugins]]
 repo = 'octol/vim-cpp-enhanced-highlight'
 on_ft = ['c', 'cpp']
+if = '!exists("g:vscode")'
 
 [[plugins]]
 repo = 'mboughaba/i3config.vim'
 on_ft = ['i3config']
+if = '!exists("g:vscode")'
 
 [[plugins]]
 repo = 'zah/nim.vim'
 on_ft = ['nim']
+if = '!exists("g:vscode")'
 
 [[plugins]]
 repo = 'yasuhiroki/github-actions-yaml.vim'
 on_ft = ['yaml']
+if = '!exists("g:vscode")'
 
 [[plugins]]
 repo = 'dag/vim-fish'
 on_ft = ['fish']
+if = '!exists("g:vscode")'
 
 [[plugins]]
 repo = 'keith/swift.vim'
 on_ft = ['swift']
+if = '!exists("g:vscode")'
 
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
 on_ft = ['markdown']
+if = '!exists("g:vscode")'
 hook_add = '''
   let g:vim_markdown_conceal = 0
   let g:tex_conceal = ""
@@ -134,27 +141,33 @@ hook_add = '''
 [[plugins]]
 repo = 'vim-crystal/vim-crystal'
 on_ft = ['cr']
+if = '!exists("g:vscode")'
 
 [[plugins]]
 repo = 'udalov/kotlin-vim'
 on_ft = ['kotlin']
+if = '!exists("g:vscode")'
 
 
 [[plugins]]
 repo = 'kylef/apiblueprint.vim'
 on_ft = ['apiblueprint']
+if = '!exists("g:vscode")'
 #}}}
 
 #-----------------------------------------------------------------------------------
 # Colorshemes {{{
 [[plugins]]
 repo = 'morhetz/gruvbox'
+if = '!exists("g:vscode")'
 
 [[plugins]]
 repo = 'w0ng/vim-hybrid'
+if = '!exists("g:vscode")'
 
 [[plugins]]
 repo = 'sainnhe/sonokai'
+if = '!exists("g:vscode")'
 hook_add = '''
   set background=dark
   let g:sonokai_enable_italic = 1
@@ -164,12 +177,15 @@ hook_add = '''
 
 [[plugins]]
 repo = 'tomasr/molokai'
+if = '!exists("g:vscode")'
 
 [[plugins]]
 repo = 'joshdick/onedark.vim'
+if = '!exists("g:vscode")'
 
 [[plugins]]
 repo = 'altercation/vim-colors-solarized'
+if = '!exists("g:vscode")'
 hook_add = '''
 let g:solarized_termcolors=256
 '''

@@ -3,6 +3,7 @@
 [[plugins]] # Emmet
 repo = 'mattn/emmet-vim'
 on_ft = ['html']
+if = '!exists("g:vscode")'
 hook_add = '''
   let g:user_emmet_leader_key = '<M-e>'
 '''
@@ -10,6 +11,7 @@ hook_add = '''
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 on_cmd = 'NERDTreeToggle'
+if = '!exists("g:vscode")'
 hook_add = '''
   nnoremap <M-f> :NERDTreeToggle<CR>
 '''
@@ -17,6 +19,7 @@ hook_add = '''
 [[plugins]]
 repo = 'dense-analysis/ale'
 on_ft = ['nim']
+if = '!exists("g:vscode")'
 hook_add = '''
   source ~/.vim/plughook/ale-hook.vim
 '''
@@ -25,7 +28,7 @@ hook_add = '''
 # For only Neovim
 [[plugins]]
 repo = 'neoclide/coc.nvim'
-if = "has('nvim')"
+if = 'has("nvim") && !exists("g:vscode")'
 rev = 'release'
 on_i = 1
 merged = '0'
