@@ -1,0 +1,60 @@
+matches:
+  - trigger: ";hug "
+    replace: "🤗"
+
+  - trigger: ";blush "
+    replace: "😊"
+
+  - trigger: ";thumbsup "
+    replace: "👍"
+
+  - trigger: ";muscle "
+    replace: "💪"
+
+  - trigger: ";eyes "
+    replace: "👀"
+
+  - trigger: ";rage "
+    replace: "😡"
+
+  - trigger: ";innocent "
+    replace: "😇"
+
+  - trigger: ";yum "
+    replace: "😋"
+
+  - trigger: ";sob "
+    replace: "😭"
+
+  - trigger: ";cry "
+    replace: "😢"
+
+  - trigger: ";thinking "
+    replace: "🤔"
+
+  - trigger: ";hamster "
+    replace: "🐹"
+
+  - trigger: ";cat "
+    replace: "🐱"
+
+  - trigger: ";rabbit "
+    replace: "🐰"
+
+  - trigger: ";star "
+    replace: "⭐"
+
+  - trigger: ";sun "
+    replace: "☀️"
+
+  - trigger: ";fire "
+    replace: "🔥"
+
+  - trigger: ";sweat "
+    replace: "💦"
+
+  - trigger: ";tada "
+    replace: "🎉"
+
+  - trigger: ";confetti "
+    replace: "🎊"
