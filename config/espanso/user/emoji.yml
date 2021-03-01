@@ -1,3 +1,6 @@
+name: arumakan-emoji
+parent: default
+
 matches:
   - trigger: ";hug "
     replace: "🤗"
