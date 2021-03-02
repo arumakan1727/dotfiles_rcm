@@ -7,10 +7,9 @@ alias mkdir="mkdir -p"
 alias quit='exit'
 alias rezsh='exec zsh'
 
-# If command `gomi` is installed, replace `rm` with `gomi`
-# gomi: https://github.com/b4b4r07/gomi
-if builtin command -v gomi > /dev/null 2>&1; then
-  alias rm='gomi'
+# rm-trash: my defined function
+if builtin command -v rm-trash > /dev/null 2>&1; then
+  alias rm='rm-trash'
 else
   alias rm='rm -iv'
 fi
