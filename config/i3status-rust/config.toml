@@ -1,0 +1,31 @@
+theme = "modern"
+icons = "awesome"
+
+[[focused_window]]
+max_width = 50
+show_marks = "visible"
+
+[[block]]
+block = "cpu"
+interval = 3
+
+[[block]]
+block = "temperature"
+collapsed = false
+interval = 10
+format = "{average}° avg"
+chip = "*-isa-*"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{MUg}GiB ({Mup}%)"
+format_swap = "swap:{SUp}%"
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "time"
+interval = 1
+format = "%m/%d %H:%M:%S"
