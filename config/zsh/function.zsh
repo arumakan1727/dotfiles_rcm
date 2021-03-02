@@ -24,3 +24,34 @@ function find_no_new_line_at_end_of_file() {
 function xkb_reload_my_settings() {
   xkbcomp -I${HOME}/.xkb ~/.xkb/keymap/mykbd $DISPLAY 2> /dev/null
 }
+
+function rm-trash() {
+  readonly local trashRootDir="$HOME/.trash"
+  readonly local date=$(date "+%Y/%m/%d")
+  readonly local time=$(date "+%H:%M:%S")
+  readonly local destDir="$trashRootDir/$date/$time"
+
+  command mkdir -p "$destDir"
+
+  for arg in $@; do
+    # '-'(ハイフン) で始まる引数は無視
+    if [ "$arg" =~ '^-' ]; then
+      echo "Info: ignore option '$arg'" 1>&2
+      continue
+    fi
+
+    if [ ! -e "$arg" ]; then
+      echo "Error: '$arg': not found" 1>&2
+      continue
+    fi
+
+    # .trash/ 内のファイルは .trash/ に退避せず削除
+    if [ "$(realpath "$arg")" =~ "^${trashRootDir}" ]; then
+      command rm --verbose -rf "$arg"
+      continue
+    fi
+
+    # .trash/ に退避
+    command mv --verbose "$arg" "$destDir"
+  done
+}
