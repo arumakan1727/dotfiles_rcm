@@ -1,4 +1,4 @@
 EXCLUDES="README*.md README.md LICENSE"
-DOTFILES_DIRS="$HOME/.dotfiles"
+DOTFILES_DIRS="$HOME/dotfiles"
 COPY_ALWAYS="git_template/HEAD"
 UNDOTTED="*:bin"
