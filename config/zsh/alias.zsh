@@ -26,6 +26,9 @@ alias lla='ll -a'
 alias ltr='ll -tr'
 alias l.='ls -d .[a-zA-Z]*'
 
+# grep
+alias grep='grep --color=auto'
+
 # chmod
 alias 644='chmod 644'
 alias 755='chmod 755'
