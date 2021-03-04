@@ -26,8 +26,8 @@ chip = "*-isa-*"
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "{MUg}GiB ({Mup}%)"
-format_swap = "swap:{SUp}%"
+format_mem = "{Mug}GiB ({Mup}%)"
+format_swap = "swap:{SUg}GiB ({SUp}%)"
 
 [[block]]
 block = "sound"
