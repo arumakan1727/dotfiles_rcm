@@ -1,10 +1,15 @@
-theme = "modern"
-icons = "awesome"
+[theme]
+# name = "solarized-dark"
+name = "slick"
+[theme.overrides]
+# https://www.nerdfonts.com/cheat-sheet
+# https://github.com/ryanoasis/powerline-extra-symbols
+separator = "\ue0b2"
 
-[[block]]
-block = "focused_window"
-max_width = 40
-show_marks = "visible"
+
+[icons]
+name = "awesome"
+
 
 [[block]]
 block = "net"
@@ -13,10 +18,20 @@ interval = 5
 use_bits = false
 hide_missing = true
 hide_inactive = true
+[block.theme_overrides]
+idle_bg = "#002b42"
+idle_fg = "#93a1a1"
+
 
 [[block]]
 block = "cpu"
 interval = 3
+[block.theme_overrides]
+idle_bg = "#00a0ff"
+info_bg = "#dc9300"
+warning_bg = "#fc620c"
+critical_bg = "#ab2811"
+
 
 [[block]]
 block = "temperature"
@@ -24,15 +39,29 @@ collapsed = false
 interval = 5
 format = "{average}°"
 chip = "*-isa-*"
+[block.theme_overrides]
+idle_bg = "#309036"
+info_bg = "#dc9300"
+warning_bg = "#fc620c"
+critical_bg = "#ab2811"
+
 
 [[block]]
 block = "memory"
 display_type = "memory"
 format_mem = "{Mug}GiB ({Mup}%)"
 format_swap = "swap:{SUg}GiB ({SUp}%)"
+[block.theme_overrides]
+idle_bg = "#c02fff"
+warning_bg = "#fc620c"
+critical_bg = "#ab2811"
+
 
 [[block]]
 block = "sound"
+[block.theme_overrides]
+idle_bg = "#d956a0"
+
 
 [[block]]
 block = "battery"
@@ -42,7 +71,10 @@ format = "{percentage}%"
 allow_missing = true
 hide_missing = true
 
+
 [[block]]
 block = "time"
 interval = 5
 format = "%m/%d %H:%M"
+[block.theme_overrides]
+idle_bg = "#6a3636"
