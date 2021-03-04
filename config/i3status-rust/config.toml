@@ -3,7 +3,7 @@ icons = "awesome"
 
 [[block]]
 block = "focused_window"
-max_width = 50
+max_width = 40
 show_marks = "visible"
 
 [[block]]
@@ -11,6 +11,8 @@ block = "net"
 format = "{ssid} {ip} {speed_down}"
 interval = 5
 use_bits = false
+hide_missing = true
+hide_inactive = true
 
 [[block]]
 block = "cpu"
@@ -38,7 +40,7 @@ device = "BAT1"
 interval = 20
 format = "{percentage}%"
 allow_missing = true
-hide_missing = false
+hide_missing = true
 
 [[block]]
 block = "time"
