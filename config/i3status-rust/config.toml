@@ -19,8 +19,8 @@ interval = 3
 [[block]]
 block = "temperature"
 collapsed = false
-interval = 10
-format = "{average}° avg"
+interval = 5
+format = "{average}°"
 chip = "*-isa-*"
 
 [[block]]
