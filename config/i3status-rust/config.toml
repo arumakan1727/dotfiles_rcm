@@ -33,6 +33,14 @@ format_swap = "swap:{SUg}GiB ({SUp}%)"
 block = "sound"
 
 [[block]]
+block = "battery"
+device = "BAT1"
+interval = 20
+format = "{percentage}%"
+allow_missing = true
+hide_missing = false
+
+[[block]]
 block = "time"
 interval = 5
 format = "%m/%d %H:%M"
