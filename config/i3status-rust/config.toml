@@ -1,5 +1,4 @@
 [theme]
-# name = "solarized-dark"
 name = "slick"
 [theme.overrides]
 # https://www.nerdfonts.com/cheat-sheet
@@ -40,7 +39,8 @@ interval = 5
 format = "{average}°"
 chip = "*-isa-*"
 [block.theme_overrides]
-idle_bg = "#309036"
+idle_bg = "#76e050"
+idle_fg = "#333333"
 info_bg = "#dc9300"
 warning_bg = "#fc620c"
 critical_bg = "#ab2811"
@@ -52,7 +52,7 @@ display_type = "memory"
 format_mem = "{Mug}GiB ({Mup}%)"
 format_swap = "swap:{SUg}GiB ({SUp}%)"
 [block.theme_overrides]
-idle_bg = "#c02fff"
+idle_bg = "#802fff"
 warning_bg = "#fc620c"
 critical_bg = "#ab2811"
 
@@ -60,7 +60,8 @@ critical_bg = "#ab2811"
 [[block]]
 block = "sound"
 [block.theme_overrides]
-idle_bg = "#d956a0"
+idle_bg = "#ff86d3"
+idle_fg = "#333333"
 
 
 [[block]]
@@ -75,6 +76,6 @@ hide_missing = true
 [[block]]
 block = "time"
 interval = 5
-format = "%m/%d %H:%M"
+format = "%m月%d日 %H:%M"
 [block.theme_overrides]
 idle_bg = "#6a3636"
