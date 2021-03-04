@@ -1,9 +1,18 @@
 theme = "modern"
 icons = "awesome"
 
-[[focused_window]]
-max_width = 50
+[[block]]
+block = "focused_window"
+max_width = 40
 show_marks = "visible"
+
+[[block]]
+block = "net"
+format = "{ssid} {ip} {speed_down}"
+interval = 5
+use_bits = false
+hide_missing = true
+hide_inactive = true
 
 [[block]]
 block = "cpu"
@@ -12,20 +21,28 @@ interval = 3
 [[block]]
 block = "temperature"
 collapsed = false
-interval = 10
-format = "{average}° avg"
+interval = 5
+format = "{average}°"
 chip = "*-isa-*"
 
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "{MUg}GiB ({Mup}%)"
-format_swap = "swap:{SUp}%"
+format_mem = "{Mug}GiB ({Mup}%)"
+format_swap = "swap:{SUg}GiB ({SUp}%)"
 
 [[block]]
 block = "sound"
 
 [[block]]
+block = "battery"
+device = "BAT1"
+interval = 20
+format = "{percentage}%"
+allow_missing = true
+hide_missing = true
+
+[[block]]
 block = "time"
-interval = 1
-format = "%m/%d %H:%M:%S"
+interval = 5
+format = "%m/%d %H:%M"
