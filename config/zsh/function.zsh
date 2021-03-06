@@ -55,3 +55,16 @@ function rm-trash() {
     command mv --verbose "$arg" "$destDir"
   done
 }
+
+# Blank lines of half the height of the terminal
+function blank-half() {
+  local count=10
+  if [[ $@ -eq 0 ]]; then
+    count=$(($(stty size| cut -d' ' -f1)/2))
+  else
+    count=$1
+  fi
+  for i in $(seq $count); do
+    echo
+  done
+}

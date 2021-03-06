@@ -49,5 +49,5 @@ alias ...='cd ../..'
 alias pbcopy='xsel --input --clipboard'
 alias pbpaste='xsel --output'
 
-# Blank lines of half the height of the terminal
-alias blanklines='tput cup $(($(stty size|cut -d " " -f 1))) 0 && tput ed'
+# move prompt to bottom of terminal
+alias move-buttom='tput cup $(($(stty size|cut -d " " -f 1))) 0 && tput ed'
