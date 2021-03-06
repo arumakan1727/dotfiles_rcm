@@ -28,8 +28,8 @@ path=(
 fpath=(
   $HOME/.zfunc(N-/)
   $HOME/.config/zsh/zfunc(N-/)
-  $HOME/.config/completion.local(N-/)
-  $HOME/.config/completion(N-/)
+  $HOME/.config/zsh/completion.local(N-/)
+  $HOME/.config/zsh/completion(N-/)
   /usr/local/share/zsh/site-functions
   /usr/share/zsh/site-functions
   $fpath
