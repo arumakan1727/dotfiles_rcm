@@ -77,7 +77,7 @@ tnoremap <silent><ESC> <C-\><C-n>
 "----------------------------------------------------------------------------------------
 " Misc
 "ファイル全体の内容を+レジスタにヤンク
-nnoremap <Leader>y magg"+yG`a
+nnoremap <Leader>y :%y<CR>
 
 "ファイル保存
 nnoremap <SubLeader>w :w<CR>
