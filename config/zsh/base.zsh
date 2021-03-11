@@ -81,7 +81,7 @@ setopt complete_in_word
 setopt equals                # =COMMAND を COMMAND のパス名に展開
 setopt nonomatch             # グロブ展開でnomatchにならないようにする
 setopt glob
-setopt extended_glob         # 拡張グロブを有効にする
+setopt no_extended_glob         # 拡張グロブを有効にする
 setopt no_flow_control       # C-s/C-q によるフロー制御を使わない
 setopt hash_cmds             # 各コマンドが実行されるときにパスをハッシュに入れる
 setopt no_hup                # ログアウト時にバックグラウンドジョブをkillしない
