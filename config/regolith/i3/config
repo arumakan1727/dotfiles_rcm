@@ -180,8 +180,14 @@ bindsym $mod+Ctrl+$ws8_key workspace number $ws18
 bindsym $mod+Ctrl+$ws9_key workspace number $ws19
 
 ## Navigate // Next Workspace // <> Tab ##
-set_from_resource $i3-wm.binding.ws_next i3-wm.binding.ws_next Tab
-bindsym $mod+$i3-wm.binding.ws_next workspace next
+# set_from_resource $i3-wm.binding.ws_next i3-wm.binding.ws_next Tab
+# bindsym $mod+$i3-wm.binding.ws_next workspace next
+
+## Navigate // Next Window // <> Tab ##
+bindsym $mod+Tab focus right
+
+## Navigate // Prev Window // <> Tab ##
+bindsym $mod+Shift+Tab focus left
 
 ## Navigate // Next Workspace // <><Alt> → ##
 set_from_resource $i3-wm.binding.ws_next2 i3-wm.binding.ws_next2 Mod1+Right
@@ -196,8 +202,8 @@ set_from_resource $i3-wm.binding.ws_next_on_output2 i3-wm.binding.ws_next_on_out
 bindsym $mod+$i3-wm.binding.ws_next_on_output2 workspace next_on_output
 
 ## Navigate // Previous Workspace // <><Shift> Tab ##
-set_from_resource $i3-wm.binding.ws_prev i3-wm.binding.ws_prev Shift+Tab 
-bindsym $mod+$i3-wm.binding.ws_prev workspace prev
+# set_from_resource $i3-wm.binding.ws_prev i3-wm.binding.ws_prev Shift+Tab 
+# bindsym $mod+$i3-wm.binding.ws_prev workspace prev
 
 ## Navigate // Previous Workspace // <><Alt> ← ##
 set_from_resource $i3-wm.binding.ws_prev2 i3-wm.binding.ws_prev2 Mod1+Left
