@@ -33,6 +33,7 @@ set tabstop=4 shiftwidth=4 softtabstop=4
 set wildmenu
 set wildmode=list,full
 set history=10000
+set wildignorecase
 
 "----------------------------------------------------------------------------------------
 " Search
