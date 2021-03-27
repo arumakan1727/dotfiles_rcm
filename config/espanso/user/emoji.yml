@@ -48,7 +48,7 @@ matches:
     replace: "⭐"
 
   - trigger: ";sun "
-    replace: "☀️"
+    replace: "☀"
 
   - trigger: ";fire "
     replace: "🔥"
@@ -61,3 +61,6 @@ matches:
 
   - trigger: ";confetti "
     replace: "🎊"
+
+  - trigger: ";bow "
+    replace: "🙇"
