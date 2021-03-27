@@ -25,7 +25,7 @@ autoload -Uz _zinit
 zinit light zdharma/fast-syntax-highlighting
 
 # コマンドラインに入力されている文字列をもとに薄い色でコマンドを提案
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=236'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=240'
 zinit ice wait'!0' lucid
 zinit light zsh-users/zsh-autosuggestions
 
