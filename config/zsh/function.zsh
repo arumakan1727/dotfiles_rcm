@@ -68,3 +68,15 @@ function blank-half() {
     echo
   done
 }
+
+# Remove executable ELF binary in specified directory. It does not searches recursively (maxdepth=1).
+function rm-exebin() {
+  if [[ $# -ne 1 ]]; then
+    echo 'Please specify target directory.' >&2
+    return 1
+  fi
+
+  for binary in $(find "$1" -maxdepth 1 -type f -exec sh -c "file {} | grep -Pi ': elf (32|64)-bit' > /dev/null" \; -print); do
+    command rm -v "$binary"
+  done
+}
