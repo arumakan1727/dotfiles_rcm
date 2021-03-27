@@ -19,6 +19,10 @@ hook_add = '''
 [[plugins]] # 簡単にコメントトグル
 repo = 'tpope/vim-commentary'
 if = '!exists("g:vscode")'
+hook_add = '''
+  nmap <C-_> <Plug>CommentaryLine
+  vmap <C-_> <Plug>Commentary
+'''
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -67,10 +71,6 @@ if = '!exists("g:vscode")'
 
 #-----------------------------------------------------------------------------------
 # Plugins for only Neovim {{{
-[[plugins]] # terminalがもっと便利になる
-repo = 'kassio/neoterm'
-if = 'has("nvim") && !exists("g:vscode")'
-
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'

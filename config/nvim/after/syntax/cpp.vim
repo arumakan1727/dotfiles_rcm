@@ -1,0 +1,2 @@
+syn keyword cppType let 
+
