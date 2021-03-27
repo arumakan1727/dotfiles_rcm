@@ -6,6 +6,8 @@ set wildmenu
 set incsearch
 set hlsearch
 
+set clipboard+=unnamed
+
 nnoremap j gj
 nnoremap k gk
 nnoremap Y y$
