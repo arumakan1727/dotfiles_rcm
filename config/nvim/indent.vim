@@ -9,4 +9,6 @@ augroup MyIndentSettingsByFiletype
         \ setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
   autocmd Filetype json
         \ setlocal shiftwidth=2 softtabstop=2 tabstop=2
+  autocmd Filetype gitconfig
+        \ setlocal shiftwidth=2 softtabstop=2 tabstop=2
 augroup END
