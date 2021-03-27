@@ -14,6 +14,8 @@ source ~/.config/nvim/rc/base.vim
 
 source ~/.config/nvim/rc/keymappings.vim
 
+source ~/.config/nvim/rc/functions.vim
+
 source ~/.config/nvim/rc/load-dein.vim
 
 source ~/.config/nvim/autoload/template-setter.vim
