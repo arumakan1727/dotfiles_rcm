@@ -34,14 +34,14 @@ endif
 "       \ coc#refresh()
 
 " <TAB> で補完候補を下へ選択 or ただのTab挿入
-inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-" inoremap <silent><expr> <TAB>
-"       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-"       \ pumvisible() ? (complete_info()['selected'] == -1 ? "\<TAB>" : coc#_select_confirm()) :
-"       \ <SID>check_back_space() ? "\<TAB>" :
-"       \ coc#refresh()
+inoremap <silent><expr> <TAB>
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ pumvisible() ? (complete_info()['selected'] == -1 ? "\<TAB>" : coc#_select_confirm()) :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -53,8 +53,8 @@ endfunction
 imap <C-k> <Plug>(coc-snippets-expand)
 vmap <C-k> <Plug>(coc-snippets-select)
 imap <C-k> <Plug>(coc-snippets-expand-jump)
-let g:coc_snippet_next = '<C-k>'
-let g:coc_snippet_prev = ''
+let g:coc_snippet_next = '<Tab>'
+let g:coc_snippet_prev = '<S-Tab>'
 
 " Use <leader>x for convert visual selected code to snippet
 " xmap <leader>x  <Plug>(coc-convert-snippet)

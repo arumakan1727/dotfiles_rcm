@@ -52,6 +52,8 @@ alias pbpaste='xsel --output'
 # move prompt to bottom of terminal
 alias move-buttom='tput cup $(($(stty size|cut -d " " -f 1))) 0 && tput ed'
 
+alias bat='batcat'
+
 # nim
 alias nimr='nim cpp --hints:off --run'
 alias nimfr='nim cpp -d:release --opt:speed --multimethods:on --warning[SmallLshouldNotBeUsed]:off --hints:off --run'
