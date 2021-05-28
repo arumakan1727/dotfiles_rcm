@@ -131,11 +131,15 @@ repo = 'plasticboy/vim-markdown'
 on_ft = ['markdown']
 if = '!exists("g:vscode")'
 hook_add = '''
+  filetype plugin indent on
   let g:vim_markdown_conceal = 0
   let g:tex_conceal = ""
   let g:vim_markdown_math = 1
   let g:vim_markdown_conceal_code_blocks = 0
   let g:vim_markdown_frontmatter = 1
+  let g:vim_markdown_new_list_item_indent = 0
+
+
 '''
 
 [[plugins]]
@@ -152,6 +156,12 @@ if = '!exists("g:vscode")'
 [[plugins]]
 repo = 'kylef/apiblueprint.vim'
 on_ft = ['apiblueprint']
+if = '!exists("g:vscode")'
+
+
+[[plugins]]
+repo = 'aklt/plantuml-syntax'
+on_ft = ['plantuml']
 if = '!exists("g:vscode")'
 #}}}
 

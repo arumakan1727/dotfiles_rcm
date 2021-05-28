@@ -54,6 +54,8 @@ alias move-buttom='tput cup $(($(stty size|cut -d " " -f 1))) 0 && tput ed'
 
 alias bat='batcat'
 
+alias open='xdg-open'
+
 # nim
 alias nimr='nim cpp --hints:off --run'
 alias nimfr='nim cpp -d:release --opt:speed --multimethods:on --warning[SmallLshouldNotBeUsed]:off --hints:off --run'

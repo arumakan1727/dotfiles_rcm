@@ -45,7 +45,11 @@ inoremap <silent><expr> <TAB>
 
 function! s:check_back_space() abort
   let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+  if !col
+    return v:true
+  endif
+  let prev_char = getline('.')[col - 1]
+  return prev_char =~# '\s' || prev_char =~# '[:;]'
 endfunction
 
 " coc snippet

@@ -11,4 +11,10 @@ augroup MyIndentSettingsByFiletype
         \ setlocal shiftwidth=2 softtabstop=2 tabstop=2
   autocmd Filetype gitconfig
         \ setlocal shiftwidth=2 softtabstop=2 tabstop=2
+  autocmd FileType html,xml,javascript,css
+        \ setlocal shiftwidth=2 softtabstop=2 tabstop=2
+  autocmd FileType text
+        \ setlocal shiftwidth=2 softtabstop=2 tabstop=2
+  autocmd FileType go
+        \ setlocal noexpandtab shiftwidth=4 tabstop=4
 augroup END
