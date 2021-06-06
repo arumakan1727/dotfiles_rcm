@@ -2,4 +2,5 @@
 augroup MyFormatOptionSetting
   autocmd!
   autocmd FileType * setlocal formatoptions=clmMrqj
+  autocmd FileType markdown setlocal spell
 augroup END

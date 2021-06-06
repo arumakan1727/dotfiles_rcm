@@ -26,19 +26,18 @@ zinit light zdharma/fast-syntax-highlighting
 
 # コマンドラインに入力されている文字列をもとに薄い色でコマンドを提案
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=240'
-zinit ice wait'!0' lucid
 zinit light zsh-users/zsh-autosuggestions
 
 # Ctrl+x -> Ctrl+b で Git ブランチを表示してインタラクティブに絞り込みして切り替え
-zinit ice wait'!0' lucid atload"bindkey '^x^b' anyframe-widget-checkout-git-branch"
+zinit ice wait'!3' lucid atload"bindkey '^x^b' anyframe-widget-checkout-git-branch"
 zinit light mollifier/anyframe
 
-zinit wait'!0' lucid light-mode for \
+zinit wait'!1' lucid light-mode for \
   zsh-users/zsh-completions \
   agkozak/zsh-z \
   zsh-users/zsh-history-substring-search
 
-zinit wait'!2' lucid light-mode for \
+zinit wait'!3' lucid light-mode for \
   mollifier/cd-gitroot \
   paulirish/git-open \
   supercrabtree/k \
