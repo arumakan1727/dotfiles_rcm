@@ -1,4 +1,5 @@
 {
+  "coc.preferences.jumpCommand": "tabe",
   "suggest.noselect": true,
   "suggest.preferCompleteThanJumpPlaceholder": false,
   "languageserver": {
