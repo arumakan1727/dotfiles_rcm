@@ -9,11 +9,6 @@
       "filetypes": ["sh", "bash"],
       "ignoredRootPaths": ["~"]
     },
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
-    },
     "nimlsp": {
         "command": "nimlsp",
         "rootPatterns": ["*.nimble"],
