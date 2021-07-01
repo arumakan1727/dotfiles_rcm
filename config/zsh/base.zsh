@@ -9,8 +9,7 @@ SAVEHIST=100000            # HISTFILE に保存される履歴の件数
 HISTORY_IGNORE="(ls|pwd|cd ..)"
 
 # C-w などで単語ごとの削除をする際の「単語境界にならない記号リスト」
-WORDCHARS='*?[]~!#$%^'
-
+WORDCHARS='*?_-.[]~&;=!#$%^(){}<>'
 # cd が検索するディレクトリのパス
 cdpath=("${HOME} ..")
 
