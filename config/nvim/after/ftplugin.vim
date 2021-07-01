@@ -3,4 +3,5 @@ augroup MyFormatOptionSetting
   autocmd!
   autocmd FileType * setlocal formatoptions=clmMrqj
   autocmd FileType markdown setlocal spell
+  autocmd FileType json setlocal conceallevel=0
 augroup END
