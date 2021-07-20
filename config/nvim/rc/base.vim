@@ -128,6 +128,7 @@ set cmdheight=2       " コマンド入力領域の行数
 set laststatus=2      " statuslineを常に表示
 "set showtabline=2     " tablineを常に表示
 set mouse=a           " マウス有効化
+set conceallevel=1    "JSONなどでダブルクォートが隠されるのを抑制(隠すけど幅は取るようにするためにlevel=1)
 
 function! WrapForTmux(s)
   if !exists('$TMUX')
