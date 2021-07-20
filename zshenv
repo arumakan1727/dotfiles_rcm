@@ -13,8 +13,8 @@ path=(
   $HOME/.bin(N-/)
   $HOME/bin(N-/)
   $HOME/.local/bin(N-/)
-
   $HOME/.pyenv/bin(N-/)
+  $HOME/.poetry/bin(N-/)
   $HOME/go/bin(N-/)
   $HOME/.go/bin(N-/)
   $HOME/.nimble/bin(N-/)
