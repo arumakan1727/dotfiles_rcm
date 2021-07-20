@@ -28,18 +28,7 @@ hook_add = '''
 repo = 'itchyny/lightline.vim'
 if = '!exists("g:vscode")'
 hook_add = '''
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'cocstatus': 'coc#status'
-      \ },
-      \ }
-" Use auocmd to force lightline update.
-autocmd! User CocStatusChange,CocDiagnosticChange call lightline#update()
+source ~/.config/nvim/pluginconfig/lightline.vim
 '''
 
 [[plugins]] # 行末の空白文字を削除するコマンドを追加
