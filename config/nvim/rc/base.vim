@@ -31,7 +31,7 @@ set tabstop=4 shiftwidth=4 softtabstop=4
 "----------------------------------------------------------------------------------------
 " Command Completion
 set wildmenu
-set wildmode=list:full
+set wildmode=full:longest,full  "最長のマッチまで補完して候補列挙->タブで候補選択
 set history=10000
 set wildignorecase
 
