@@ -7,11 +7,11 @@ augroup MyIndentSettingsByFiletype
         \ setlocal shiftwidth=16 tabstop=16 softtabstop=16 noexpandtab
   autocmd Filetype yaml
         \ setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
-  autocmd Filetype json
+  autocmd Filetype json,jsonc
         \ setlocal shiftwidth=2 softtabstop=2 tabstop=2
   autocmd Filetype gitconfig
         \ setlocal shiftwidth=2 softtabstop=2 tabstop=2
-  autocmd FileType html,xml,javascript,css
+  autocmd FileType html,xml,javascript,typescript,css
         \ setlocal shiftwidth=2 softtabstop=2 tabstop=2
   autocmd FileType text
         \ setlocal shiftwidth=2 softtabstop=2 tabstop=2

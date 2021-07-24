@@ -50,6 +50,7 @@ repo = 'nathanaelkane/vim-indent-guides'
 if = '!exists("g:vscode")'
 hook_add = '''
     let g:indent_guides_enable_on_vim_startup = 1
+    autocmd Colorscheme * :hi IndentGuidesOdd guibg=#33302c
 '''
 
 
@@ -151,6 +152,11 @@ if = '!exists("g:vscode")'
 [[plugins]]
 repo = 'aklt/plantuml-syntax'
 on_ft = ['plantuml']
+if = '!exists("g:vscode")'
+
+[[plugins]]
+repo = 'kevinoid/vim-jsonc'
+on_ft = ['jsonc']
 if = '!exists("g:vscode")'
 #}}}
 
