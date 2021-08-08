@@ -75,6 +75,7 @@ export GOPATH=$HOME/.go
 export PYENV_ROOT=$HOME/.pyenv
 export SDKMAN_DIR="$HOME/.sdkman"
 export PIPENV_VENV_IN_PROJECT=true
+export NVM_DIR="$HOME/.nvm"
 
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && \
   source "$HOME/.sdkman/bin/sdkman-init.sh"
