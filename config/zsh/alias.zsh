@@ -52,7 +52,7 @@ alias pbpaste='xsel --output'
 # move prompt to bottom of terminal
 alias move-buttom='tput cup $(($(stty size|cut -d " " -f 1))) 0 && tput ed'
 
-alias bat='batcat'
+(command -v batcat > /dev/null 2>&1) && alias bat='batcat'
 
 alias open='xdg-open'
 
