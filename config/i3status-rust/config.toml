@@ -13,8 +13,7 @@ name = "awesome"
 [[block]]
 block = "net"
 format = "{ssid} {ip} {speed_down}"
-interval = 5
-use_bits = false
+interval = 3
 hide_missing = true
 hide_inactive = true
 
@@ -27,16 +26,16 @@ interval = 3
 [[block]]
 block = "temperature"
 collapsed = false
-interval = 5
-format = "{average}°"
+interval = 3
+format = "{average}"
 chip = "*-isa-*"
 
 
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "{Mug}GiB ({Mup}%)"
-format_swap = "swap:{SUg}GiB ({SUp}%)"
+format_mem = "{mem_used;G} ({mem_used_percents})"
+format_swap = "swap:{swap_used;G} ({swap_used_percents})"
 
 
 [[block]]
@@ -46,7 +45,7 @@ block = "sound"
 [[block]]
 block = "battery"
 device = "BAT1"
-interval = 20
+interval = 30
 format = "{percentage}%"
 allow_missing = true
 hide_missing = true
