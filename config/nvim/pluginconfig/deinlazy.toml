@@ -28,7 +28,9 @@ repo = 'iamcco/markdown-preview.nvim'
 on_ft = ['markdown', 'rmd']
 if = 'has("nvim") && !exists("g:vscode")'
 on_i = 1
-build = 'cd app & yarn install'
+hook_post_update = '''
+  cd app && yarn install
+'''
 hook_add = '''
   " set to 1, nvim will open the preview window after entering the markdown buffer
   " default: 0
