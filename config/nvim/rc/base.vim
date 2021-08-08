@@ -23,11 +23,6 @@ set smarttab
 set shiftround
 set autoindent smartindent
 
-"tabstopはTab文字を画面上で何文字分に展開するか
-"shiftwidthはcindentやautoindent時に挿入されるインデントの幅
-"softtabstopはTabキー押し下げ時の挿入される空白の量，0の場合はtabstopと同じ，BSにも影響する
-set tabstop=4 shiftwidth=4 softtabstop=4
-
 "----------------------------------------------------------------------------------------
 " Command Completion
 set wildmenu

@@ -1,20 +1,12 @@
+set expandtab
+set tabstop=2 shiftwidth=2 softtabstop=2
+
 augroup MyIndentSettingsByFiletype
   autocmd!
-
-  autocmd Filetype vim,sh,bash,zsh
-        \ setlocal shiftwidth=2 softtabstop=2 tabstop=2
   autocmd Filetype tsv
         \ setlocal shiftwidth=16 tabstop=16 softtabstop=16 noexpandtab
-  autocmd Filetype yaml
-        \ setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
-  autocmd Filetype json,jsonc
-        \ setlocal shiftwidth=2 softtabstop=2 tabstop=2
-  autocmd Filetype gitconfig
-        \ setlocal shiftwidth=2 softtabstop=2 tabstop=2
-  autocmd FileType html,xml,javascript,typescript,css
-        \ setlocal shiftwidth=2 softtabstop=2 tabstop=2
-  autocmd FileType text
-        \ setlocal shiftwidth=2 softtabstop=2 tabstop=2
   autocmd FileType go
         \ setlocal noexpandtab shiftwidth=4 tabstop=4
+  autocmd FileType c,cpp,java,python
+        \ setlocal tabstop=4 shiftwidth=4 softtabstop=4
 augroup END
