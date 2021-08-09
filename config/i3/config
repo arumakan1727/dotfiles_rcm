@@ -180,7 +180,7 @@ bindsym $mod+minus exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym $mod+semicolon exec --no-startup-id playerctl play-pause
 
 bar {
-    font pango: JetBrains Mono NF, FontAwesome 14
+    font pango: JetBrains Mono, FontAwesome 14
     position bottom
     status_command i3status-rs ~/.config/i3status-rust/config.toml
     colors {
