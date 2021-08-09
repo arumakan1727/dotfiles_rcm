@@ -6,7 +6,7 @@
 HISTFILE=~/.zsh_history    # ヒストリ保存先ファイル
 HISTSIZE=32768             # メモリに保存される履歴の件数 (保存数だけ履歴を検索できる)
 SAVEHIST=100000            # HISTFILE に保存される履歴の件数
-HISTORY_IGNORE="(ls|pwd|cd ..)"
+HISTORY_IGNORE="(ls|ll|la|pwd|cd ..|cd|task *)"
 
 # C-w などで単語ごとの削除をする際の「単語境界にならない記号リスト」
 WORDCHARS='*?_-.[]~&;=!#$%^(){}<>'
@@ -116,7 +116,7 @@ setopt notify                # バックグラウンドジョブが終了した�
 #setopt no_unset             # 未定義変数の使用禁止
 setopt interactive_comments  # コマンド入力中のコメントを認める
 setopt chase_links           # シンボリックリンクはリンク先のパスに変換してから実行
-setopt print_exit_value      # 戻り値が 0 以外の場合終了コードを表示
+setopt no_print_exit_value   # 戻り値が 0 以外の場合終了コードを表示 しない
 #setopt single_line_zle      # デフォルトの複数行コマンドライン編集ではなく、１行編集モードになる
 #setopt xtrace               # コマンドラインがどのように展開され実行されたかを表示する
 setopt nolistambiguous       # メニューを出す
