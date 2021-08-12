@@ -31,6 +31,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id fcitx -rd
 exec --no-startup-id guake
 exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper-archlinux.png
+exec --no-startup-id pgrep unclutter || unclutter -b
 
 
 # applications
