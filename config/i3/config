@@ -152,15 +152,15 @@ bindsym $mod+Shift+s exec systemctl suspend
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-    bindsym $left       resize shrink width 10 px or 10 ppt
-    bindsym $down       resize grow height 10 px or 10 ppt
-    bindsym $up         resize shrink height 10 px or 10 ppt
-    bindsym $right      resize grow width 10 px or 10 ppt
+    bindsym $left       resize shrink width 10 px
+    bindsym $down       resize grow height 10 px
+    bindsym $up         resize shrink height 10 px
+    bindsym $right      resize grow width 10 px
 
-    bindsym Left        resize shrink width 10 px or 10 ppt
-    bindsym Down        resize grow height 10 px or 10 ppt
-    bindsym Up          resize shrink height 10 px or 10 ppt
-    bindsym Right       resize grow width 10 px or 10 ppt
+    bindsym Left        resize shrink width 10 px
+    bindsym Down        resize grow height 10 px
+    bindsym Up          resize shrink height 10 px
+    bindsym Right       resize grow width 10 px
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
