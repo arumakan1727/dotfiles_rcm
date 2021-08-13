@@ -1,4 +1,3 @@
-
 #======================================================================================
 # Aliases
 #======================================================================================
@@ -7,13 +6,15 @@ alias mkdir="mkdir -p"
 alias quit='exit'
 alias rezsh='exec zsh'
 
-# rm-trash: my defined function
-if builtin command -v rm-trash > /dev/null 2>&1; then
-  alias rm='rm-trash'
-else
-  alias rm='rm -iv'
+if builtin command -v exa > /dev/null 2>&1; then
+  alias e='exa --icons'
+  alias ea='exa -a --icons'
+  alias el='exa -l --icons'
+  alias ela='exa -aal --icons'
+  alias et='exa -T -L 3 -I "node_modules|.git|.cache|.venv"'
 fi
 
+alias rm='rm -iv'
 alias mv='mv -iv'
 alias cp='cp -iv'
 alias ln='ln -v'
