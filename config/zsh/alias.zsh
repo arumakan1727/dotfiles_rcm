@@ -27,8 +27,11 @@ alias lla='ll -a'
 alias ltr='ll -tr'
 alias l.='ls -d .[a-zA-Z]*'
 
-# grep
+# colorize
 alias grep='grep --color=auto'
+alias diff='diff --color=auto'
+alias ip='ip --color=auto'
+
 
 # chmod
 alias 644='chmod 644'
