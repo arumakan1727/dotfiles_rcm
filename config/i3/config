@@ -175,6 +175,30 @@ bindsym $mod+plus exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1%
 bindsym $mod+minus exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1%
 bindsym $mod+backslash exec --no-startup-id playerctl play-pause
 
+
+# Screenshot
+set $screenshot_save_dir ~/Pictures/screenshots
+
+## on startup: mkdir
+exec --no-startup-id command mkdir -p $screenshot_save_dir
+
+## ctrl+print: Select window or drug&drop interactively -> Copy to clipboard
+bindsym Ctrl+Print --release \
+  exec --no-startup-id maim -s | xclip -i -selection clipboard -t image/png && notify-send 'maim' 'Copied to clipboard'
+
+## ctrl+shift+print: Select window or drug&drop interactively -> Save
+bindsym Ctrl+Shift+Print --release \
+  exec --no-startup-id maim -s $screenshot_save_dir/$(date +'%F_%T.%4N').png && notify-send 'maim' 'Saved into $screenshot_save_dir'
+
+## win+print: Capture whole screen -> Copy to clipboard
+bindsym Mod4+Print --release \
+  exec --no-startup-id maim | xclip -i -selection clipboard -t image/png && notify-send 'maim' 'Copied to clipboard'
+
+## win+shift+print: Capture whole screen -> Save
+bindsym Mod4+Shift+Print --release \
+  exec --no-startup-id maim $screenshot_save_dir/$(date +'%F_%T.%4N').png && notify-send 'maim' 'Saved into $screenshot_save_dir'
+
+
 bar {
     font pango: JetBrains Mono, FontAwesome 13
     position bottom
