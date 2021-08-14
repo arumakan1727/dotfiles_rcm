@@ -11,7 +11,7 @@ if builtin command -v exa > /dev/null 2>&1; then
   alias ea='exa -a --icons'
   alias el='exa -l --icons'
   alias ela='exa -aal --icons'
-  alias et='exa -T -L 3 -I "node_modules|.git|.cache|.venv"'
+  alias et='exa -T -L 3 --icons -I "node_modules|.git|.cache|.venv"'
 fi
 
 alias rm='rm -iv'
