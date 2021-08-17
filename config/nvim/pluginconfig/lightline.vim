@@ -16,8 +16,6 @@ let g:lightline = {
       \ },
       \ }
 
-call lightline#lsp#register()
-
 function! LightlineFilename()
   return ('' != expand('%') ? expand('%') : '[No Name]')
 endfunction

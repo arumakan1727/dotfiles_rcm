@@ -87,10 +87,6 @@ hook_add = '''
   nmap <Space>k <Plug>(easymotion-k)
 '''
 
-[[plugins]]
-repo = 'josa42/nvim-lightline-lsp'
-if = 'has("nvim") && !exists("g:vscode")'
-
 # }}}
 
 #-----------------------------------------------------------------------------------

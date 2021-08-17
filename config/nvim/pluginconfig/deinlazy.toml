@@ -58,3 +58,18 @@ repo = 'nvim-lua/completion-nvim'
 if = 'has("nvim") && !exists("g:vscode")'
 on_i = 1
 hook_source = 'source ~/.config/nvim/pluginconfig/vim_lua_completion.vim'
+
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+if = 'has("nvim") && !exists("g:vscode")'
+on_i = 1
+hook_source = 'source ~/.config/nvim/pluginconfig/nvim-treesitter.vim'
+
+
+[[plugins]]
+repo = 'josa42/nvim-lightline-lsp'
+if = 'has("nvim") && !exists("g:vscode")'
+on_i = 1
+hook_source = '''
+  call lightline#lsp#register()
+'''
