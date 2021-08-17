@@ -1,5 +1,7 @@
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'default',
+      \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
@@ -10,22 +12,8 @@ let g:lightline = {
       \ },
       \ }
 
-function! LightlineModified()
-  if &filetype == 'help'
-    return ''
-  elseif &modified
-    return '+'
-  elseif &modifiable
-    return ''
-  else
-    return '-'
-  endif
-endfunction
-
 function! LightlineFilename()
-  return
-       \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
-       \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
+  return ('' != expand('%') ? expand('%') : '[No Name]')
 endfunction
 
 let g:lightline.tab = {

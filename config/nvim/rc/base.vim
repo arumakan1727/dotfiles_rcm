@@ -57,7 +57,7 @@ set modeline    "ファイル末尾のモードライン読み込みを有効化
 set noswapfile
 set noundofile
 set nobackup
-set writebackup
+set nowritebackup
 set backupskip=/tmp/*
 autocmd! BufWritePre * let &backupext = '.' . strftime("%Y-%m-%d_%H:%M:%S") . '~'
 
@@ -88,6 +88,7 @@ set novisualbell
 syntax enable
 set t_Co=256
 set background=dark
+let g:vimsyn_embed = 'lPr'
 
 "true color support
 let colorterm=$COLORTERM
@@ -111,17 +112,17 @@ set matchtime=0       " 括弧の対を見つけるミリ秒数
 set showcmd           " 入力中のコマンドを表示
 set number            " 行番号表示
 set cursorline        " 現在行をハイライト
-"set relativenumber    " 行番号を現在行からの相対的な距離に
-"set nowrap            " 画面幅で折り返さない
+" set relativenumber    " 行番号を現在行からの相対的な距離に
+set nowrap            " 画面幅で折り返さない
 set list              " 不可視文字表示
 set listchars=tab:>\ ,trail:･,extends:>,precedes:<,nbsp:%
 set title             " タイトルの表示
 set scrolloff=5       " 上下方向のカーソルからのゆとり行数
 set sidescrolloff=5   " 上下方向のカーソルからのゆとり行数
-set pumheight=10      " 補完候補の表示数
+set pumheight=5       " 補完候補の表示数
 set cmdheight=2       " コマンド入力領域の行数
 set laststatus=2      " statuslineを常に表示
-"set showtabline=2     " tablineを常に表示
+" set showtabline=2     " tablineを常に表示
 set mouse=a           " マウス有効化
 set conceallevel=1    "JSONなどでダブルクォートが隠されるのを抑制(隠すけど幅は取るようにするためにlevel=1)
 

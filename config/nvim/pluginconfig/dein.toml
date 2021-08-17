@@ -3,8 +3,8 @@
 [[plugins]] # プラグインマネージャ
 repo = 'Shougo/dein.vim'
 
-[[plugins]] # カーソル位置のコンテキストのfiletypeを判定するライブラリ
-repo = 'Shougo/context_filetype.vim'
+# [[plugins]] # カーソル位置のコンテキストのfiletypeを判定するライブラリ
+# repo = 'Shougo/context_filetype.vim'
 
 [[plugins]] # 囲える
 repo = 'tpope/vim-surround'
@@ -57,6 +57,12 @@ hook_add = '''
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 if = '!exists("g:vscode")'
+
+
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+if = '!exists("g:vscode")'
+
 # }}}
 
 #-----------------------------------------------------------------------------------
@@ -195,3 +201,4 @@ hook_add = '''
 let g:solarized_termcolors=256
 '''
 # }}}
+
