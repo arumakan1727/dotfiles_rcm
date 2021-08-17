@@ -1,6 +1,3 @@
-" TextEdit might fail if hidden is not set.
-set hidden
-
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
@@ -15,14 +12,7 @@ set updatetime=500
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-if has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
+set completeopt=menuone,noinsert,noselect
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -34,13 +24,8 @@ endif
 "       \ coc#refresh()
 
 " <TAB> で補完候補を下へ選択 or ただのTab挿入
-inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-" inoremap <silent><expr> <TAB>
-"       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-"       \ pumvisible() ? (complete_info()['selected'] == -1 ? "\<TAB>" : coc#_select_confirm()) :
-"       \ <SID>check_back_space() ? "\<TAB>" :
-"       \ coc#refresh()
+inoremap <silent><expr><Tab>   pumvisible() ? "\<Down>" : "\<Tab>"
+inoremap <silent><expr><S-Tab> pumvisible() ? "\<Up>"   : "\<S-Tab>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -52,7 +37,6 @@ function! s:check_back_space() abort
 endfunction
 
 " coc snippet
-"-----------------------------------------------------------------------
 imap <C-k> <Plug>(coc-snippets-expand)
 vmap <C-k> <Plug>(coc-snippets-select)
 imap <C-k> <Plug>(coc-snippets-expand-jump)
@@ -62,20 +46,11 @@ let g:coc_snippet_prev = '<S-Tab>'
 " Use <leader>x for convert visual selected code to snippet
 " xmap <leader>x  <Plug>(coc-convert-snippet)
 
-"-----------------------------------------------------------------------
-
 " Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <C-space> coc#refresh()
-else
-  inoremap <silent><expr> <C-@> coc#refresh()
-endif
+inoremap <silent><expr> <C-space> coc#refresh()
 
-
-" <CR> の挙動: 補完リストが表示されていなければ改行、
-" 表示されていれば {補完候補を選択していなければ改行、選択していればそれを決定・挿入}
 if exists('*complete_info')
-  inoremap <silent><expr> <CR>
+  inoremap <silent><expr><CR>
               \ pumvisible() ? (complete_info()['selected'] == -1 ? "\<C-g>u\<CR>" : "\<C-y>")
               \ : "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
 else
@@ -84,8 +59,8 @@ endif
 
 
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
-nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
+nmap <silent> [d <Plug>(coc-diagnostic-prev)
+nmap <silent> ]d <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -105,7 +80,7 @@ function! s:show_documentation()
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <Space>rn <Plug>(coc-rename)
@@ -125,10 +100,9 @@ augroup end
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
 xmap <Space>a  <Plug>(coc-codeaction-selected)
-nmap <Space>a  <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying codeAction to the current buffer.
-nmap <Space>ac  <Plug>(coc-codeaction)
+nmap <Space>ca  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <Space>qf  <Plug>(coc-fix-current)
 
@@ -161,16 +135,16 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 "---------------------------------------------------------------------------------------
 " [Mappings for CoCList]
 " Show all diagnostics.
-" nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <space>q  :<C-u>CocList diagnostics<cr>
 "
 " Manage extensions.
-" nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 "
 " Show commands.
 " nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 "
 " Find symbol of current document.
-" nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 "
 " Search workspace symbols.
 " nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>

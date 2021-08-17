@@ -31,6 +31,9 @@ hook_add = '''
 source ~/.config/nvim/pluginconfig/lightline.vim
 '''
 
+[[plugins]]
+repo = 'mengelbrecht/lightline-bufferline'
+
 [[plugins]] # 行末の空白文字を削除するコマンドを追加
 repo = 'ntpeters/vim-better-whitespace'
 if = '!exists("g:vscode")'
@@ -46,11 +49,12 @@ hook_add = '''
 repo = 'tpope/vim-repeat'
 
 [[plugins]]
-repo = 'nathanaelkane/vim-indent-guides'
+repo = 'Yggdroot/indentLine'
 if = '!exists("g:vscode")'
 hook_add = '''
-    let g:indent_guides_enable_on_vim_startup = 1
-    autocmd Colorscheme * :hi IndentGuidesOdd guibg=#33302c
+  let g:indentLine_enabled = 1
+  let g:indentLine_setConceal = 0
+  let g:indentLine_char = '┆'
 '''
 
 
@@ -71,7 +75,6 @@ if = '!exists("g:vscode")'
 
 #-----------------------------------------------------------------------------------
 # Plugins for only Neovim {{{
-
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
 if = 'has("nvim") && !exists("g:vscode")'
@@ -86,7 +89,6 @@ hook_add = '''
   nmap <Space>j <Plug>(easymotion-j)
   nmap <Space>k <Plug>(easymotion-k)
 '''
-
 # }}}
 
 #-----------------------------------------------------------------------------------
@@ -138,8 +140,6 @@ hook_add = '''
   let g:vim_markdown_conceal_code_blocks = 0
   let g:vim_markdown_frontmatter = 1
   let g:vim_markdown_new_list_item_indent = 0
-
-
 '''
 
 [[plugins]]
@@ -152,12 +152,10 @@ repo = 'udalov/kotlin-vim'
 on_ft = ['kotlin']
 if = '!exists("g:vscode")'
 
-
 [[plugins]]
 repo = 'kylef/apiblueprint.vim'
 on_ft = ['apiblueprint']
 if = '!exists("g:vscode")'
-
 
 [[plugins]]
 repo = 'aklt/plantuml-syntax'
@@ -204,5 +202,9 @@ if = '!exists("g:vscode")'
 hook_add = '''
 let g:solarized_termcolors=256
 '''
-# }}}
 
+[[plugins]]
+repo = 'jacoborus/tender.vim'
+if = '!exists("g:vscode")'
+
+# }}}

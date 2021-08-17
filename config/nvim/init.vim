@@ -21,6 +21,6 @@ source ~/.config/nvim/rc/load-dein.vim
 source ~/.config/nvim/autoload/template-setter.vim
 
 try
-  colorscheme gruvbox
+  colorscheme onedark
 catch
 endtry

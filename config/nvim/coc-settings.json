@@ -1,7 +1,7 @@
 {
-  "coc.preferences.jumpCommand": "tabe",
   "suggest.noselect": true,
   "suggest.preferCompleteThanJumpPlaceholder": false,
+  "signature.preferShownAbove": false,
   "languageserver": {
     "bash":{
       "command": "bash-language-server",

@@ -1,14 +1,19 @@
 let g:lightline = {
-      \ 'colorscheme': 'default',
+      \ 'colorscheme': 'one',
       \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
       \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
       \ 'active': {
-      \   'left': [
-        \     [ 'mode', 'paste' ],
-        \     [ 'readonly', 'filename', 'modified' ],
-        \     [ 'lsp_info', 'lsp_hints', 'lsp_erors', 'lsp_warnings', 'lsp_ok' ],
-        \     [ 'lsp_status' ],
-        \ ],
+      \   'left': [['mode', 'paste'], ['readonly', 'filename', 'modified'], ['cocstatus']],
+      \ },
+      \ 'tabline': {
+      \   'left': [['buffers']],
+      \   'right': [['close']],
+      \ },
+      \ 'component_expand': {
+      \   'buffers': 'lightline#bufferline#buffers',
+      \ },
+      \ 'component_type': {
+      \   'buffers': 'tabsel'
       \ },
       \ 'component_function': {
       \   'cocstatus': 'coc#status',
@@ -20,23 +25,6 @@ function! LightlineFilename()
   return ('' != expand('%') ? expand('%') : '[No Name]')
 endfunction
 
-let g:lightline.tab = {
-    \ 'active': ['tabnum', 'filename', 'modified'],
-    \ 'inactive': ['tabnum', 'filename', 'modified'],
-    \ }
-
-let g:lightline.tab_component_function = {
-      \ 'filename': 'LightlineTabFilename',
-      \ 'modified': 'lightline#tab#modified',
-      \ 'readonly': 'lightline#tab#readonly',
-      \ 'tabnum': 'lightline#tab#tabnum' }
-
-function! LightlineTabFilename(n) abort
-  let buflist = tabpagebuflist(a:n)
-  let winnr = tabpagewinnr(a:n)
-  let _ = expand('#'.buflist[winnr - 1].':h:t').'/'.expand('#'.buflist[winnr - 1].':t')
-  return _ !=# '' ? _ : '[No Name]'
-endfunction
-
 " Use auocmd to force lightline update.
 autocmd! User CocStatusChange,CocDiagnosticChange call lightline#update()
+autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
