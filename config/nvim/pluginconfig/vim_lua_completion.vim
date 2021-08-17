@@ -10,7 +10,7 @@ inoremap <expr> <Tab>   pumvisible() ? "\<Down>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<Up>"   : "\<S-Tab>"
 
 let g:completion_confirm_key = ""
-imap <expr> <cr>  pumvisible() ? complete_info()["selected"] != "-1" ?
+imap <expr> <CR>  pumvisible() ? complete_info()["selected"] != "-1" ?
       \ "\<Plug>(completion_confirm_completion)"  : "\<c-e>\<CR>" :  "\<CR>"
 
 

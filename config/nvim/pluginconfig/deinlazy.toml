@@ -31,6 +31,14 @@ on_i = 1
 hook_post_update = 'cd app && yarn install'
 hook_add = 'source ~/.config/nvim/pluginconfig/markdown-preview.vim'
 
+[[plugins]]
+repo = 'preservim/tagbar'
+if = 'has("nvim") && !exists("g:vscode")'
+on_i = 1
+hook_add = '''
+nnoremap <M-t> :TagbarToggle<CR>
+'''
+
 #-----------------------------------------------------------------------------------
 # For only Neovim
 

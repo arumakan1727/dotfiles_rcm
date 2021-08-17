@@ -3,14 +3,20 @@ let g:lightline = {
       \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
       \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+      \   'left': [
+        \     [ 'mode', 'paste' ],
+        \     [ 'readonly', 'filename', 'modified' ],
+        \     [ 'lsp_info', 'lsp_hints', 'lsp_erors', 'lsp_warnings', 'lsp_ok' ],
+        \     [ 'lsp_status' ],
+        \ ],
       \ },
       \ 'component_function': {
       \   'cocstatus': 'coc#status',
       \   'filename': 'LightlineFilename',
       \ },
       \ }
+
+call lightline#lsp#register()
 
 function! LightlineFilename()
   return ('' != expand('%') ? expand('%') : '[No Name]')
