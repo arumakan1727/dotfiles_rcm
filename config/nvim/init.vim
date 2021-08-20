@@ -20,6 +20,8 @@ source ~/.config/nvim/rc/load-dein.vim
 
 source ~/.config/nvim/autoload/template-setter.vim
 
+source $VIMRUNTIME/macros/matchit.vim
+
 try
   colorscheme onedark
 catch
