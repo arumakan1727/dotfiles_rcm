@@ -63,9 +63,9 @@ repo = 'airblade/vim-gitgutter'
 if = '!exists("g:vscode")'
 
 
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
-if = '!exists("g:vscode")'
+# [[plugins]]
+# repo = 'jiangmiao/auto-pairs'
+# if = '!exists("g:vscode")'
 
 [[plugins]]
 repo = 'MattesGroeger/vim-bookmarks'

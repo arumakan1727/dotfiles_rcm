@@ -5,14 +5,15 @@ let g:ale_completion_enabled = 0
 let g:ale_sign_column_always = 1
 
 let g:ale_lint_on_save= 1
-let g:ale_lint_on_text_changed = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_delay = 500
 
 let g:ale_fix_on_save = 1
 
 let g:ale_linters = {
-    \ 'nim': ['nimcheck', 'nimlsp']
+    \ 'nim': ['nimcheck']
     \ }
 
 let g:ale_fixers = {

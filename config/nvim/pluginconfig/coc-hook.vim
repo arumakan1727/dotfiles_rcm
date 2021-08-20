@@ -14,18 +14,9 @@ set shortmess+=c
 
 set completeopt=menuone,noinsert,noselect
 
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-
-" inoremap <silent><expr> <TAB>
-"       \ pumvisible() ? "\<C-n>" :
-"       \ <SID>check_back_space() ? "\<TAB>" :
-"       \ coc#refresh()
-
 " <TAB> で補完候補を下へ選択 or ただのTab挿入
-inoremap <silent><expr><Tab>   pumvisible() ? "\<Down>" : "\<Tab>"
-inoremap <silent><expr><S-Tab> pumvisible() ? "\<Up>"   : "\<S-Tab>"
+" inoremap <silent><expr><Tab>   pumvisible() ? "\<Down>" : "\<Tab>"
+" inoremap <silent><expr><S-Tab> pumvisible() ? "\<Up>"   : "\<S-Tab>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -53,8 +44,13 @@ if exists('*complete_info')
   inoremap <silent><expr><CR>
               \ pumvisible() ? (complete_info()['selected'] == -1 ? "\<C-g>u\<CR>" : "\<C-y>")
               \ : "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
+
+  inoremap <silent><expr><Tab>
+              \ pumvisible() ? (complete_info()['selected'] == -1 ? "\<Tab>" : "\<C-y>")
+              \ : "\<Tab>"
 else
   inoremap <expr><CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+  inoremap <expr><Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
 endif
 
 
@@ -157,3 +153,6 @@ nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 "
 " Resume latest coc list.
 " nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+autocmd! FileType nim
+      \ let b:coc_pairs_disabled = ['<']
