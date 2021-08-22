@@ -71,6 +71,14 @@ if = '!exists("g:vscode")'
 repo = 'MattesGroeger/vim-bookmarks'
 if = '!exists("g:vscode")'
 
+[[plugins]]
+repo = 'kamykn/spelunker.vim'
+if = '!exists("g:vscode")'
+hook_add = '''
+  hi SpelunkerSpellBad gui=undercurl guisp=#0099ee
+  hi SpelunkerComplexOrCompoundWord gui=undercurl guisp=#009933
+'''
+
 # }}}
 
 #-----------------------------------------------------------------------------------

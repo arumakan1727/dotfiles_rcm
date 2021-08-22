@@ -90,3 +90,7 @@ nnoremap <CR> i<CR><ESC>
 
 "open buffer list
 nnoremap <SubLeader>b :ls<CR>:<C-u>b 
+
+"Indent
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<

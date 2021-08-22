@@ -15,8 +15,8 @@ set shortmess+=c
 set completeopt=menuone,noinsert,noselect
 
 " <TAB> で補完候補を下へ選択 or ただのTab挿入
-" inoremap <silent><expr><Tab>   pumvisible() ? "\<Down>" : "\<Tab>"
-" inoremap <silent><expr><S-Tab> pumvisible() ? "\<Up>"   : "\<S-Tab>"
+inoremap <silent><expr><Tab>   pumvisible() ? "\<Down>" : "\<Tab>"
+inoremap <silent><expr><S-Tab> pumvisible() ? "\<Up>"   : "\<S-Tab>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -31,8 +31,8 @@ endfunction
 imap <C-k> <Plug>(coc-snippets-expand)
 vmap <C-k> <Plug>(coc-snippets-select)
 imap <C-k> <Plug>(coc-snippets-expand-jump)
-let g:coc_snippet_next = '<Tab>'
-let g:coc_snippet_prev = '<S-Tab>'
+let g:coc_snippet_next = '<C-k>'
+let g:coc_snippet_prev = '<C-j>'
 
 " Use <leader>x for convert visual selected code to snippet
 " xmap <leader>x  <Plug>(coc-convert-snippet)
@@ -44,13 +44,8 @@ if exists('*complete_info')
   inoremap <silent><expr><CR>
               \ pumvisible() ? (complete_info()['selected'] == -1 ? "\<C-g>u\<CR>" : "\<C-y>")
               \ : "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
-
-  inoremap <silent><expr><Tab>
-              \ pumvisible() ? (complete_info()['selected'] == -1 ? "\<Tab>" : "\<C-y>")
-              \ : "\<Tab>"
 else
   inoremap <expr><CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-  inoremap <expr><Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
 endif
 
 
