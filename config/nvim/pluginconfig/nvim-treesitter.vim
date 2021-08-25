@@ -2,7 +2,7 @@ lua << EOF
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
-    disable = { "vim" },
+    disable = { "vim", "html", "htmldjango", "css", "markdown" },
   },
   indent = {
     enable = true,

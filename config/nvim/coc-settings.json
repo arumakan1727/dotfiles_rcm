@@ -1,8 +1,11 @@
 {
   "suggest.noselect": true,
   "suggest.preferCompleteThanJumpPlaceholder": false,
+  "suggest.detailField": "menu",
+  "suggest.enablePreview": true,
+  "suggest.removeDuplicateItems": true,
   "signature.preferShownAbove": false,
-  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnType": false,
   "coc.preferences.formatOnTypeFiletypes": ["html", "cpp", "javascript"],
   "languageserver": {
     "bash":{
@@ -12,11 +15,9 @@
       "ignoredRootPaths": ["~"]
     },
     "nimlsp": {
-        "command": "nimlsp",
-        "rootPatterns": ["*.nimble"],
-        "filetypes": ["nim"],
-        "trace.server": "verbose",
-        "enable": true
+      "command": "nimlsp",
+      "rootPatterns": [".git/", "src/"],
+      "filetypes": ["nim", "nimble"]
     }
   },
   "snippets.priority": 5,

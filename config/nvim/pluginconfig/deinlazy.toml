@@ -50,8 +50,8 @@ hook_source = 'source ~/.config/nvim/pluginconfig/nvim-treesitter.vim'
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 if = 'has("nvim") && !exists("g:vscode")'
-rev = 'release'
+rev = 'master'
 on_i = 1
-merged = '0'
+merged = 0
 build = 'yarn install --frozen-lockfile'
 hook_source = 'source ~/.config/nvim/pluginconfig/coc-hook.vim'
